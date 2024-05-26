@@ -5,6 +5,7 @@ namespace App\Http\Controllers\api\auth;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\loginrequest;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class authcontroller extends Controller
 {
@@ -33,4 +34,15 @@ class authcontroller extends Controller
         'type' => 'bearer'
     ]);
 }
+public function logout()
+{
+    try {
+        Auth::guard('api')->logout();  // Invalidate the token
+
+        return response()->json(['message' => 'Successfully logged out']);
+    } catch (\Exception $e) {
+        return response()->json(['error' => 'Something went wrong while logging out.'], 500);
+    }
+}
+
 }

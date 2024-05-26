@@ -1882,10 +1882,6 @@
                         "application/json": {
                             "schema": {
                                 "properties": {
-                                    "id_rapport": {
-                                        "type": "integer",
-                                        "example": ""
-                                    },
                                     "nom_etudiant": {
                                         "type": "string",
                                         "example": ""
@@ -1900,6 +1896,10 @@
                                     },
                                     "photo": {
                                         "type": "string",
+                                        "example": ""
+                                    },
+                                    "codeApogee": {
+                                        "type": "integer",
                                         "example": ""
                                     }
                                 },
@@ -1949,7 +1949,7 @@
                         "application/json": {
                             "schema": {
                                 "properties": {
-                                    "id_rapport": {
+                                    "codeApogee": {
                                         "type": "integer",
                                         "example": ""
                                     },
@@ -1967,6 +1967,10 @@
                                     },
                                     "photo": {
                                         "type": "string",
+                                        "example": ""
+                                    },
+                                    "id_rapport": {
+                                        "type": "integer",
                                         "example": ""
                                     }
                                 },
@@ -2087,7 +2091,7 @@
                     }
                 ],
                 "requestBody": {
-                    "description": "Book data that needs to be added to the store",
+                    "description": "Examen data that needs to be added to the store",
                     "required": true,
                     "content": {
                         "application/json": {
@@ -2095,28 +2099,28 @@
                                 "properties": {
                                     "id_session": {
                                         "type": "integer",
-                                        "example": ""
+                                        "example": "1"
                                     },
                                     "code_module": {
                                         "type": "integer",
-                                        "example": ""
+                                        "example": "101"
                                     },
                                     "id_pv": {
                                         "type": "integer",
-                                        "example": ""
+                                        "example": "2"
                                     },
                                     "date_examen": {
                                         "type": "string",
                                         "format": "date",
-                                        "example": ""
+                                        "example": "2024-06-01"
                                     },
                                     "demi_journee_examen": {
                                         "type": "string",
-                                        "example": "144488"
+                                        "example": "AM"
                                     },
                                     "seance_examen": {
                                         "type": "string",
-                                        "example": ""
+                                        "example": "1"
                                     }
                                 },
                                 "type": "object"
@@ -2159,7 +2163,7 @@
                     }
                 ],
                 "requestBody": {
-                    "description": "Book data that needs to be added to the store",
+                    "description": "Examen data that needs to be updated",
                     "required": true,
                     "content": {
                         "application/json": {
@@ -2167,28 +2171,28 @@
                                 "properties": {
                                     "id_session": {
                                         "type": "integer",
-                                        "example": ""
+                                        "example": "1"
                                     },
                                     "code_module": {
                                         "type": "integer",
-                                        "example": ""
+                                        "example": "101"
                                     },
                                     "id_pv": {
                                         "type": "integer",
-                                        "example": ""
+                                        "example": "2"
                                     },
                                     "date_examen": {
                                         "type": "string",
                                         "format": "date",
-                                        "example": ""
+                                        "example": "2024-06-01"
                                     },
                                     "demi_journee_examen": {
                                         "type": "string",
-                                        "example": "144488"
+                                        "example": "AM"
                                     },
                                     "seance_examen": {
                                         "type": "string",
-                                        "example": ""
+                                        "example": "1"
                                     }
                                 },
                                 "type": "object"
@@ -2933,6 +2937,16 @@
                                     },
                                     "type_session": {
                                         "type": "string",
+                                        "example": ""
+                                    },
+                                    "datedebut": {
+                                        "type": "string",
+                                        "format": "date",
+                                        "example": ""
+                                    },
+                                    "datefin": {
+                                        "type": "string",
+                                        "format": "date",
                                         "example": ""
                                     }
                                 },
